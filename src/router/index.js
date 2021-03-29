@@ -5,7 +5,7 @@ import firebase from 'firebase'
 
 import Driver from '@/pages/Driver'
 import Signin from '@/pages/Signin'
-import SignUp from '@/pages/SignUp'
+import SignUp from '@/pages/Signup'
 import Admin from '@/pages/Admin'
 
 
@@ -13,38 +13,38 @@ Vue.use(Router)
 
 let router = new Router({
   routes: [{
-      path: '/driver',
-      name: 'Driver',
-      component: Driver,
-      meta: {
-        requiresAuth: true
-      }
-    },
-
-    {
-      path: '/signin',
-      name: 'Signin',
-      component: Signin,
-      meta: {
-        guest: true
-      }
-    },
-    {
-      path: '/signup',
-      name: 'SignUp',
-      component: SignUp,
-      meta: {
-        guest: true
-      }
-    },
-    {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin,
-      meta: {
-        requiresAuth: true
-      }
+    path: '/driver',
+    name: 'Driver',
+    component: Driver,
+    meta: {
+      requiresAuth: true
     }
+  },
+
+  {
+    path: '/signin',
+    name: 'Signin',
+    component: Signin,
+    meta: {
+      guest: true
+    }
+  },
+  {
+    path: '/signup',
+    name: 'SignUp',
+    component: SignUp,
+    meta: {
+      guest: true
+    }
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: Admin,
+    meta: {
+      requiresAuth: true
+    }
+  }
   ]
 })
 

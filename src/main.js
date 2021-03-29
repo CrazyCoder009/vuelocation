@@ -14,7 +14,13 @@ Vue.config.productionTip = false
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  YOUR_CONFIGURATIONP_CODE_HERE
+  apiKey: "AIzaSyBW30L3gNGUEHeTmK6kPDnYNYWfFjFo0oo",
+  authDomain: "srmtracker-b9740.firebaseapp.com",
+  projectId: "srmtracker-b9740",
+  storageBucket: "srmtracker-b9740.appspot.com",
+  messagingSenderId: "60099038412",
+  appId: "1:60099038412:web:7c28be2889159e53b54669",
+  measurementId: "G-DT09HFGB0D"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

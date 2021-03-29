@@ -1,6 +1,31 @@
 <template>
   <div class="admin-view">
-    <h1>Admin View</h1>
+    <section class="left-view">
+      <div class="ui segment center aligned">
+        <div v-if="user">{{user.email}}</div>
+        <div>Admin</div>
+        <button class="ui button red" @click="signOutButtonPressed">Signout</button>
+      </div>
+      <div class="ui segment">
+        <div class="ui divided items">
+          <div
+            class="item"
+            v-for="driver in drivers"
+            :key="driver.id"
+          >
+            <div class="content">
+              <div class="header">{{driver.email}}</div>
+              <div class="meta">
+                Lat : {{driver.lat}}
+                <br />
+                Lng :{{driver.lng}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="right-view" ref="map"></section>
   </div>
 </template>
 
